@@ -1,0 +1,146 @@
+[BaseStats]
+Hp=3500
+Tp=250
+Str=$calc(40 + $current.battlestreak)
+Def=$calc(30 + $current.battlestreak)
+Int=$calc(30 + $current.battlestreak)
+Spd=$calc(30 + $current.battlestreak)
+Name=Soma Cruz
+
+
+[Battle]
+Hp=3500
+Tp=250
+Str=$calc(40 + $current.battlestreak)
+Def=$calc(30 + $current.battlestreak)
+Int=$calc(30 + $current.battlestreak)
+Spd=$calc(30 + $current.battlestreak)
+Status=alive
+
+
+[Rage]
+RageBar=0
+RageCountDown=0
+
+[Limit]
+Level=1
+Percent=0
+
+
+
+[Descriptions]
+Hused=1
+Dused=1
+Char=is a young man that has white hair. He wears black clothes along with a white and silver coat.
+Rage=needs to set a rage desc by typing !ragedesc <desc>
+
+[Stuff]
+RedOrbs=1
+BlackOrbs=1
+ShopLevel=1
+RedOrbsSpent=1
+BlackOrbsSpent=0
+
+[Info]
+Gender=his
+Gender2=him
+password=battlearena
+passhurt=0
+LastSeen=N/a
+LastIP=N/a
+Created=Fri Jun 22 19:56:53 2012
+Flag=NPC
+CanTaunt=false
+
+[Status]
+Poison=no
+HeavyPoison=no
+Regenerating=no
+Blind=no
+Frozen=no
+Shock=no
+Burning=no
+Drowning=no
+Earth-quake=no
+Heavy-Poison=no
+silence=no
+intimidated=no
+weight=no
+poison-heavy=no
+virus=no
+virus.timer=1
+charmed=no
+charmer=noOneThatIKnow
+charm.timer=1
+amnesia=no
+paralysis=no
+amnesia.timer=1
+paralysis.timer=1
+tornado=no
+drunk=no
+drunk.timer=1
+zombie=no
+slow=no
+sleep=no
+stun=no
+MPRegenerating=no
+boosted=no
+freezing=no
+curse=no
+poison.timer=1
+KiRegenerating=no
+curse.timer=1
+slow.timer=1
+zombie.timer=1
+
+
+[Weapons]
+Equipped=Valmanway
+Valmanway=$round($calc(500 + (($current.battlestreak / 2) / 5.5)),0)
+Balmung=$round($calc(500 + (($current.battlestreak / 2) / 5.5)),0)
+Yoichinoyumi=$round($calc(500 + (($current.battlestreak / 2) / 5.5)),0)
+
+
+[Skills]
+MartialArts=1000
+Swordmaster=1000
+Archery=1000
+Zen=5
+ClearMind=3
+Impetus=20
+WeaponBash=1
+Resist-Charm=100
+Resist-Amnesia=100
+Resist-Curse=100
+Resist-Intimidate=100
+Resist-Zombie=100
+RoyalGuard=1
+ManaWall=1
+
+
+[Techniques]
+Tachi:Shoha=$round($calc(125 + (($current.battlestreak / 2) / 5.5)),0)
+Tachi:Rana=$round($calc(125 + (($current.battlestreak / 2) / 5.5)),0)
+Shockwave=$round($calc(125 + (($current.battlestreak / 2) / 5.5)),0)
+SickleMoon=$round($calc(125 + (($current.battlestreak / 2) / 5.5)),0)
+EagleEyeShot=$round($calc(125 + (($current.battlestreak / 2) / 5.5)),0)
+JishnusRadiance=$round($calc(125 + (($current.battlestreak / 2) / 5.5)),0)
+ApexArrow=$round($calc(125 + (($current.battlestreak / 2) / 5.5)),0)
+
+
+[Item_Amount]
+Prism-Specs=1
+
+
+[Styles]
+Equipped=HitenMitsurugi-Ryu
+HitenMitsurugi-Ryu=10
+HitenMitsurugi-RyuXP=1
+
+[Augments]
+Valmanway=TechBonus
+Balmung=Drain
+Yoichinoyumi=AdditionalHit
+
+[Equipment]
+Accessory=Prism-Specs
