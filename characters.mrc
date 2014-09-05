@@ -54,6 +54,7 @@ on 1:TEXT:!new char*:*: {  $checkscript($2-)
   .copy $char(new_chr) $char($nick)
   writeini $char($nick) BaseStats Name $nick 
   writeini $char($nick) Info Created $fulldate
+  writeini $char($nick) host $address($nick,2)
 
   ;  Add the starting orbs to the new character..
   writeini $char($nick) Stuff RedOrbs %starting.orbs
@@ -152,6 +153,9 @@ on 3:TEXT:!log out*:*:{ .auser 1 $nick | mode %battlechan -v $nick | .flush 1 }
 alias idcheck { 
   if ($readini($char($1), info, flag) != $null) { $display.private.message($readini(translation.dat, errors, Can'tLogIntoThisChar)) | halt }
   if ($readini($char($1), info, banned) = yes) {  $display.private.message(4This character has been banned and cannot be used to log in.) | halt }
+  if ($readini($char($1),info, host) == $address($1,2)) { 
+	$id_login($1) | unset %password | return
+  }
   $passhurt($1) | $password($1)
   if (%password = $null) { unset %passhurt | unset %password |  $display.private.message($readini(translation.dat, errors, NeedToMakeACharacter)) | halt }
   if ($2 = $null) { halt }
@@ -199,6 +203,7 @@ alias id_login {
     }
   }
   writeini $char($1) Info LastSeen $fulldate
+  writeini $char($1) host $address($nick,2)
   writeini $char($1) info passhurt 0 
   return
 }
